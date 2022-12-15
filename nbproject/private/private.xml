@@ -3,9 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project-master/src/sig/view/InvoiceHeaderDialog.java</file>
-            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project-master/src/sig/view/invoiceFrame.java</file>
-            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project-master/src/sig/view/InvoiceLineDialog.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/view/LineDialog.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/model/invoiceHeader.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/model/invoiceLine.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/model/Headers.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/controller/Actions.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/model/Lines.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/view/invoiceFrame.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/controller/Listeners.java</file>
+            <file>file:/Users/omarsenger/Downloads/Sales_Java_Project/src/sig/view/HeaderDialog.java</file>
         </group>
     </open-files>
 </project-private>

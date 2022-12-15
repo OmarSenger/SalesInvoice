@@ -3,12 +3,12 @@ package sig.model;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
-public class InvoiceLineTable extends AbstractTableModel {
+public class Lines extends AbstractTableModel {
 
     private ArrayList<invoiceLine> linesArray;
     private String[] columns = {"Item Name", "Unit Price", "Count", "Line Total"};
 
-    public InvoiceLineTable(ArrayList<invoiceLine> linesArray) {
+    public Lines(ArrayList<invoiceLine> linesArray) {
         this.linesArray = linesArray;
     }
 

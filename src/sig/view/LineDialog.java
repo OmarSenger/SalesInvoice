@@ -6,7 +6,7 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-    public class InvoiceLineDialog extends JDialog{
+    public class LineDialog extends JDialog{
     private final JTextField _nameF;
     private final JTextField _countF;
     private final JTextField _priceF;
@@ -16,7 +16,7 @@ import javax.swing.JTextField;
     private JButton _save;
     private JButton _cancel;
     
-    public InvoiceLineDialog(invoiceFrame frame) {
+    public LineDialog(invoiceFrame frame) {
         _nameF = new JTextField(20);
         _nameL = new JLabel("Item Name");
         

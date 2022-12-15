@@ -16,23 +16,23 @@ import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import sig.view.InvoiceHeaderDialog;
-import sig.view.InvoiceLineDialog;
+import sig.view.HeaderDialog;
+import sig.view.LineDialog;
 import sig.model.invoiceHeader;
-import sig.model.InvoiceHeaderTable;
+import sig.model.Headers;
 import sig.model.invoiceLine;
-import sig.model.InvoiceLineTable;
+import sig.model.Lines;
 
 
 
 
 
- public class ActionHandler implements ActionListener{
+ public class Actions implements ActionListener{
          private invoiceFrame frame;
-         private InvoiceHeaderDialog headerDialog;
-         private InvoiceLineDialog lineDialog;
+         private HeaderDialog headerDialog;
+         private LineDialog lineDialog;
 
-    public ActionHandler(invoiceFrame frame) {
+    public Actions(invoiceFrame frame) {
          
         this.frame = frame;
     }
@@ -138,7 +138,7 @@ import sig.model.InvoiceLineTable;
                         inv.getLines().add(line);
                     }
                 }
-                InvoiceHeaderTable headerTable = new InvoiceHeaderTable(invoiceHeaders);
+                Headers headerTable = new Headers(invoiceHeaders);
                 frame.setInvoiceheaderTable(headerTable);
                 frame.getheaderTable().setModel(headerTable);
                 System.out.println("files read");
@@ -155,7 +155,7 @@ import sig.model.InvoiceLineTable;
         if(s1 == null){
          JOptionPane.showMessageDialog(frame, "Please Select .CSV File!", "Error", JOptionPane.ERROR_MESSAGE);
         }else{
-        headerDialog = new InvoiceHeaderDialog(frame);
+        headerDialog = new HeaderDialog(frame);
         headerDialog.setVisible(true);
         }
     }
@@ -167,7 +167,7 @@ import sig.model.InvoiceLineTable;
             frame.getInvoicesArray().remove(selectedInvoiceIndex);
             frame.getInvoiceheaderTable().fireTableDataChanged();
 
-            frame.getlineTable().setModel(new InvoiceLineTable(null));
+            frame.getlineTable().setModel(new Lines(null));
             frame.setLinesArray(null);
             frame.getCustNameLbl().setText("");
             frame.getInvNumLbl().setText("");
@@ -180,7 +180,7 @@ import sig.model.InvoiceLineTable;
         if(s1 == null){
          JOptionPane.showMessageDialog(frame, "Please Select .CSV File!", "Error", JOptionPane.ERROR_MESSAGE);
         }else{
-        lineDialog = new InvoiceLineDialog(frame);
+        lineDialog = new LineDialog(frame);
         lineDialog.setVisible(true);
     }}
 
@@ -189,7 +189,7 @@ import sig.model.InvoiceLineTable;
         int selectedInvoiceIndex = frame.getheaderTable().getSelectedRow();
         if (selectedLineIndex != -1) {
             frame.getLinesArray().remove(selectedLineIndex);
-            InvoiceLineTable lineTableModel = (InvoiceLineTable) frame.getlineTable().getModel();
+            Lines lineTableModel = (Lines) frame.getlineTable().getModel();
             lineTableModel.fireTableDataChanged();
             frame.getInvTotalIbl().setText("" + frame.getInvoicesArray().get(selectedInvoiceIndex).getItemTotal());
             frame.getInvoiceheaderTable().fireTableDataChanged();
@@ -299,7 +299,7 @@ import sig.model.InvoiceLineTable;
             invoiceHeader invHeader = frame.getInvoicesArray().get(selectedInvHeader);
             invoiceLine line = new invoiceLine(name, price, count, invHeader);
             frame.getLinesArray().add(line);
-            InvoiceLineTable lineTable = (InvoiceLineTable) frame.getlineTable().getModel();
+            Lines lineTable = (Lines) frame.getlineTable().getModel();
             lineTable.fireTableDataChanged();
             frame.getInvoiceheaderTable().fireTableDataChanged();
         }

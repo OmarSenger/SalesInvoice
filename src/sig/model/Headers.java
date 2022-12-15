@@ -6,12 +6,12 @@ import javax.swing.table.AbstractTableModel;
 import sig.view.invoiceFrame;
 
 
-public class InvoiceHeaderTable extends AbstractTableModel {
+public class Headers extends AbstractTableModel {
 
     private ArrayList<invoiceHeader> invoicesArray;
     private String[] colmns = {"Invoice Number", "Invoice Date", "Customer Name", "Invoice Total"};
     
-    public InvoiceHeaderTable(ArrayList<invoiceHeader> invoicesArray) {
+    public Headers(ArrayList<invoiceHeader> invoicesArray) {
         this.invoicesArray = invoicesArray;
     }
 

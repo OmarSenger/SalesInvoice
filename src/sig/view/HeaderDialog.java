@@ -6,7 +6,7 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class InvoiceHeaderDialog extends JDialog {
+public class HeaderDialog extends JDialog {
     
     private final JButton _save;
     private final JButton _cancel;
@@ -16,7 +16,7 @@ public class InvoiceHeaderDialog extends JDialog {
     private final JLabel _dateL;
     
     
-    public InvoiceHeaderDialog(invoiceFrame frame) {
+    public HeaderDialog(invoiceFrame frame) {
         _nameL = new JLabel("Customer Name:");
         _nameF = new JTextField(20);
         _dateL = new JLabel(" Date:");
